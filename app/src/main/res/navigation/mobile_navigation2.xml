@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_addPropiedad"
             app:destination="@id/addPropiedad" />
+        <action
+            android:id="@+id/action_nav_home_to_updatePropiedadFragment"
+            app:destination="@id/updatePropiedadFragment" />
     </fragment>
 
     <fragment
@@ -34,5 +37,17 @@
         <action
             android:id="@+id/action_addPropiedad_to_nav_home"
             app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePropiedadFragment"
+        android:name="com.example.lugares.ui.home.UpdatePropiedadFragment"
+        android:label="fragment_update_propiedad"
+        tools:layout="@layout/fragment_update_propiedad" >
+        <action
+            android:id="@+id/action_updatePropiedadFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="propiedad"
+            app:argType="com.example.lugares.model.Propiedad" />
     </fragment>
 </navigation>

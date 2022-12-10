@@ -37,7 +37,7 @@ class AddPropiedad : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel = ViewModelProvider(this).get(homeViewModel::class.java)
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentAddPropiedadBinding.inflate(inflater,container,false)
 
         binding.btAddPropiedad.setOnClickListener { agregarPropiedad() }

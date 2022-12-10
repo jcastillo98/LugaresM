@@ -2,6 +2,11 @@
     <string name="app_name">Propiedades</string>
     <string name="tv_correo">Correo</string>
     <string name="tv_clave">Contraseña</string>
+
+    <string name="msg_nombre">Nombre de la Propiedad</string>
+    <string name="msg_email">Email de propietario (correo@xxx.xxx)</string>
+    <string name="msg_telefono">Teléfono de propietario (9999–9999)</string>
+    <string name="msg_web">Sitio Web</string>
     <string name="title_activity_principal">Principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,11 +22,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="msg_nombre">Nombre de la Propiedad</string>
-    <string name="msg_email">Email de propietario (correo@xxx.xxx)</string>
-    <string name="msg_telefono">Teléfono de propietario (9999–9999)</string>
-    <string name="msg_web">Sitio Web</string>
+
     <string name="bt_agregar_propiedad">Agregar Propiedad</string>
+    <string name="bt_borrar_propiedad">Borrar Propiedad</string>
+    <string name="bt_actualizar_propiedad">Actualizar Propiedad</string>
+    <string name="msg_lugar_added">Lugar Agregado</string>
+    <string name="msg_lugar_updated">Lugar Actualizado</string>
     <string name="msg_error">Revisar los datos</string>
+    <string name="msg_seguro_borrado">¿Está seguro de eliminar la propiedad: </string>
+    <string name="msg_si">Si</string>
+    <string name="msg_no">No</string>
+    <string name="msg_propiedad_deleted">Propiedad Eliminada…</string>
 
 </resources>
