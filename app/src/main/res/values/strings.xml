@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lugares</string>
+    <string name="app_name">Propiedades</string>
     <string name="tv_correo">Correo</string>
     <string name="tv_clave">Contraseña</string>
     <string name="title_activity_principal">Principal</string>
@@ -10,8 +10,18 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_lugar">Lugares</string>
+    <string name="menu_lugar">Propiedades</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_principal2">Principal2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="msg_nombre">Nombre de la Propiedad</string>
+    <string name="msg_email">Email de propietario (correo@xxx.xxx)</string>
+    <string name="msg_telefono">Teléfono de propietario (9999–9999)</string>
+    <string name="msg_web">Sitio Web</string>
+    <string name="bt_agregar_propiedad">Agregar Propiedad</string>
+    <string name="msg_error">Revisar los datos</string>
+
 </resources>

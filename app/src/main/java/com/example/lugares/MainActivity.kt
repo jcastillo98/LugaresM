@@ -14,6 +14,8 @@ import com.google.firebase.ktx.Firebase
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
+
+    //Objeto Firebase
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
 
@@ -22,17 +24,16 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Inicializar la autenticación
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
 
-        //Metodo de login
-        binding.btLogin.setOnClickListener(){
-            hacerlogin();
-        }
-        //Metodo de Registro
-        binding.btRegister.setOnClickListener(){
-            hacerRegister();
-        }
+        //Definir el evento onClic del boton Register
+        binding.btLogin.setOnClickListener(){ hacerlogin(); }
+
+        //Definir el evento onClic del boton Login
+        binding.btRegister.setOnClickListener(){ hacerRegister(); }
     }
 
     private fun hacerRegister() {
@@ -59,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun actualiza(user: FirebaseUser) {
+    private fun actualiza(user: FirebaseUser?) {
         if (user != null){
             val intent = Intent(this, Principal2::class.java)
             startActivity(intent)
@@ -80,7 +81,7 @@ class MainActivity : AppCompatActivity() {
         var clave = binding.etClave.text.toString()
 
         //Se hace login
-
+        Log.d("Autenticandose","Haciendo llamado de autenticación")
         auth.signInWithEmailAndPassword(email,clave)
             .addOnCompleteListener(this) {task ->
                 if (task.isSuccessful){
@@ -90,11 +91,13 @@ class MainActivity : AppCompatActivity() {
                         actualiza(user)
                     }
                 }else{
-                    Log.d("Autenticando","Fallo")
-                    Toast.makeText(baseContext,"Fallo",Toast.LENGTH_LONG).show()
-                    //actualiza(null)
+                    Log.e("Autenticando","Error de Autenticación")
+                    println(task.exception.toString())
+                    Toast.makeText(baseContext,"Fallo", Toast.LENGTH_LONG).show()
+                    actualiza(null)
                 }
             }
+        Log.d("Autenticando","Sale del proceso...")
     }
 
 
